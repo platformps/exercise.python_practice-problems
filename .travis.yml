@@ -1,0 +1,21 @@
+#   Travis continuous integration service(travisci)
+
+#   Travis CI is a hosted, distributed continuous integration service 
+#   used to build and test projects hosted at GitHub. Travis CI automatically
+#   detects when a commit has been made and pushed to a GitHub repository that 
+#   is using Travis CI, and each time this happens, 
+#   it will try to build the project and run tests. 
+
+#   The simplest way to explain Travis CI is that it runs your program's tests 
+#   every time you commit to GitHub (this can be configured in many ways, and you 
+#   can always disable builds on some branches). The point of this is that you can
+#   often discover very quickly if your commit broke something, and fix it before
+#   it becomes a problem. I would recommend running Travis CI on every GitHub repo 
+#   that you have unit tests in and is using a programming language supported by 
+#   Travis CI. Since setting up Travis CI is very easy, I don't normally see a good 
+#   reason not to use it, unless you don't care if you have passing tests in your 
+#   program or not. Feel free to leave a comment if you have any more questions. 
+#   You can read more about Travis CI here. (stackoverflow.com, joshua-anderson)
+
+language: python
+script: python -m unittest discover -s ./src/test/ -p '*_test.py'
