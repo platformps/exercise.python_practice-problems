@@ -24,7 +24,11 @@ class Lister(object):
             up to and including `stop`
             and are divisible by 2
         '''
-        int_list=self.get_integer_list(start, stop, step)
+        int_list=[]
+        even_list=[]
+        for idx in range(start,stop,step):
+            int_list.append(idx)
+        
         even_list=[]
         for i in int_list:
             if i%2==0:
@@ -41,8 +45,11 @@ class Lister(object):
             up to and including `stop`
             and are not divisible by 2
         '''
-        int_list=self.get_integer_list(start, stop, step)
+        int_list=[]
         odd_list=[]
+        for idx in range(start,stop,step):
+            int_list.append(idx)
+    
         for i in int_list:
             if i%2!=0:
                 odd_list.append(i)
