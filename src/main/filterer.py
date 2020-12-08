@@ -9,17 +9,17 @@ class Filterer(object):
             (case sensitive)
             a string with each character in the `characters_to_remove` removed from the string
         '''
-        return None
+        result = str(string_to_remove_from)
+        for removeable in characters_to_remove:
+            result = result.replace(removeable, '')
+        return result
 
     def remove_vowels(self, string_to_remove_from):
-        ''' TODO - Implement solution
-        Given 1 arguments:
-            `string_to_remove_from`, representative of the string to remove the characters from
-        return
-            (case insensitive)
-            a string with each character in the list `['a','e',i','o','u']` removed from the string
-        '''
-        return None
+        lower_case_vowels = 'aeiou'
+        upper_case_vowels = lower_case_vowels.upper()
+        vowels = lower_case_vowels + upper_case_vowels
+        vowels_list = list(vowels)
+        return self.remove_characters(string_to_remove_from, list())
 
     def remove_consonants(self, string_to_remove_from):
         ''' TODO - Implement solution
@@ -29,5 +29,5 @@ class Filterer(object):
             (case insensitive)
             a string with each character in the list `['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']` removed from the string
         '''
-        return None
+        return self.remove_characters(string_to_remove_from, list('bcdfghjklmnpqrstvwxyz'))
 
