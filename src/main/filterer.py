@@ -9,7 +9,11 @@ class Filterer(object):
             (case sensitive)
             a string with each character in the `characters_to_remove` removed from the string
         '''
-        return None
+        parsed_string=''
+        for letter in string_to_remove_from:
+            if letter not in characters_to_remove:
+                parsed_string+=letter
+        return parsed_string
 
     def remove_vowels(self, string_to_remove_from):
         ''' TODO - Implement solution
@@ -19,7 +23,12 @@ class Filterer(object):
             (case insensitive)
             a string with each character in the list `['a','e',i','o','u']` removed from the string
         '''
-        return None
+        vowels=['a','e','i','o','u']
+        parsed_string=''
+        for letter in string_to_remove_from:
+            if letter not in vowels:
+                parsed_string+=letter
+        return parsed_string
 
     def remove_consonants(self, string_to_remove_from):
         ''' TODO - Implement solution
@@ -29,5 +38,9 @@ class Filterer(object):
             (case insensitive)
             a string with each character in the list `['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']` removed from the string
         '''
-        return None
-
+        cons=['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+        parsed_string=''
+        for letter in string_to_remove_from:
+            if letter not in cons:
+                parsed_string+=letter
+        return parsed_string
