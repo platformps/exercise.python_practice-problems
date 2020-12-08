@@ -9,7 +9,15 @@ class Lister(object):
             incrementing by `step`,
             up to and including `stop`
         '''
-        return None
+        my_list = []
+        current = start
+        if step == 0:
+            my_list.append(start)
+        else:
+            while current <= stop:
+                my_list.append(current)
+                current = current + step
+        return my_list
 
     def get_even_list(self, start, stop, step):
         ''' TODO - Implement solution
@@ -21,7 +29,17 @@ class Lister(object):
             up to and including `stop`
             and are divisible by 2
         '''
-        return None
+        my_list = []
+        current = start
+        if step == 0:
+            if start % 2 == 0:
+                my_list.append(start)
+        else:
+            while current <= stop:
+                if current % 2 == 0:
+                    my_list.append(current)
+                current = current + step
+        return my_list
 
     def get_odd_list(self, start, stop, step):
         ''' TODO - Implement solution
@@ -33,4 +51,14 @@ class Lister(object):
             up to and including `stop`
             and are not divisible by 2
         '''
-        return None
+        my_list = []
+        current = start
+        if step == 0:
+            if start % 2 == 1:
+                my_list.append(start)
+        else:
+            while current <= stop:
+                if current % 2 == 1:
+                    my_list.append(current)
+                current = current + step
+        return my_list
