@@ -17,7 +17,6 @@ class Filterer(object):
             else:
                 result = result + string_to_remove_from[count]
                 count = count + 1
-
         return result
 
     def remove_vowels(self, string_to_remove_from):
