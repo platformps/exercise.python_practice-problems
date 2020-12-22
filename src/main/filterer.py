@@ -35,11 +35,11 @@ class Filterer(object):
 
 
     def remove_consonants(self, string_to_remove_from):
-        constants = 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz'
+        consonant = 'bcdfghjklmnpqrstvwxyz'
         result = ' '
-        for character in string_to_remove_from:
-            if character.lower() != constants:
-                result += character
+        for char in string_to_remove_from:
+            if char.lower() != consonant:
+                result += char
         return result
 
         # Given 1 arguments:
